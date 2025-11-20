@@ -1,121 +1,74 @@
-<a name="readme-top"></a>
-<div align="center">
+Haj Ali TOR – Windows GUI Client for Tor Expert Bundle
 
-[![Contributors](https://img.shields.io/github/contributors/abysshint/tor-control-panel.svg?style=for-the-badge)](https://github.com/abysshint/tor-control-panel/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/abysshint/tor-control-panel.svg?style=for-the-badge)](https://github.com/abysshint/tor-control-panel/network/members)
-[![MIT License](https://img.shields.io/github/license/abysshint/tor-control-panel.svg?style=for-the-badge)](https://github.com/abysshint/tor-control-panel/blob/main/LICENSE)
-[![Stargazers](https://img.shields.io/github/stars/abysshint/tor-control-panel.svg?style=for-the-badge)](https://github.com/abysshint/tor-control-panel/stargazers)
-[![Downloads](https://img.shields.io/github/downloads/abysshint/tor-control-panel/total.svg?style=for-the-badge)](https://github.com/abysshint/tor-control-panel/releases)
+Haj Ali TOR panel is an advanced and lightweight Windows GUI application built for the Tor Expert Bundle.
+It provides full control over Tor, allowing users to manage circuits, monitor network activity, configure bridges, customize server settings, and analyze real-time traffic — all through a clean and user-friendly interface.
 
-</div>
+✨ Key Features
 
-<div align="center">
-  <a href="https://github.com/abysshint/tor-control-panel"><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/common/tcp-logo.png" alt="Logo" width="80" height="80"></a>
-  <h3 align="center">Tor Control Panel</h3>
-  <p align="center">
-    Windows GUI Client for Tor Expert Bundle
-    <br />
-    <br />
-    Language: 
-	  <a href="https://github.com/abysshint/tor-control-panel#readme-top">English</a> · 
-      <a href="https://github.com/abysshint/tor-control-panel/blob/main/README.ru.md#readme-top">Русский</a>
-  </p>
-</div>
+Start, stop, and restart Tor with one click
+Change Tor circuits instantly
+View real-time traffic and bandwidth statistics
+Manage bridges, proxies, and relay settings
+Configure hidden services and session profiles
+Monitor nodes, countries, ping, and availability
+Built-in network scanner with detailed metrics
+Fully translated interface with multi-language support
+Portable design — no installation required
 
-## Table of contents
+⚙️ Based On
 
-* [Overview](#overview)
-* [System Requirements](#system-requirements)
-* [Program Features](#program-features)
-* [Screenshots](#screenshots)
-* [Project Build](#Project-build)
-* [Privacy](#privacy)
-* [License](#license)
-* [Links](#links)
+This project is forked from the original Tor Control Panel and includes personal modifications, UI enhancements, optimizations, and custom adjustments.
 
-## Overview
-<u>Tor Control Panel</u> is a free and simple GUI tool for configuring, managing and monitoring the operation of the [Tor Expert Bundle](https://www.torproject.org/download/tor/) on the operating system Windows. The program's operation is based solely on editing configuration files, parsing local descriptor caches, and sending requests/receiving responses through the control port. The program has a nice and intuitive interface that will help you get more out of the Tor network with a minimum of effort.
+📦 Requirements
 
-## System Requirements
-* Operating system: Windows 7 and above
-* Tor version: 0.4.0.5 and above
+Windows 7 / 8 / 10 / 11
+Tor Expert Bundle (0.4.x or newer)
 
-    > Note: the program can run on Windows XP and Vista, however tor and pluggable transports from the official Tor Expert Bundle no longer support these operating systems
-<p align="right">[<a href="#readme-top">↑ Up</a>]</p>
+🎯 Purpose of This Fork
 
-## Program Features
-* Ability to connect to the Tor network via bridges and a proxy server
-* Ability to choose as nodes not only countries, but also hashes, IP addresses and CIDR masks
-* Ability to reset Guard nodes
-* Ability to scan relays for reachability of ports and ping measuring
-* Ability to manage hidden services
-* Ability to use selected Entry nodes as Vanguards
-* Ability to add and configure the launch of pluggable transports
-* Ability to extract displayed data as text lists
-* Saving/Loading your lists of Entry, Middle, Exit and Exсlude nodes
-* Automatic nodes selection based on user settings
-* Running multiple copies of the program with different profiles
-* Showing the Tor message log and saving it to a file
-* Configuring Tor to Work in Server Mode (Exit Node, Relay, and Bridge)
-* View information on all nodes of the current consensus (Nickname, IP address, Country, Version, Consensus weight, Ping, etc.)
-* A convenient filtering, searching and sorting system that helps you choose the most suitable nodes
-* Viewing and closing circuits/active connections
-* Displaying traffic statistics in the form of a graph and digital data
-* Convenient bridge management system (caching, exclusion of unsuitable ones, priority selection)
-* The program is portable, installation is not required, where it was launched, it works there
-* Support for visual themes
-* Multilingual interface with the ability to add new localizations
-<p align="right">[<a href="#readme-top">↑ Up</a>]</p>
+This fork aims to:
+Improve usability
+Enhance UI layout and translations
+Fix minor bugs
+Add personal customizations or integrations
 
-## Screenshots
-<table border="0">
-  <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-options-general.png" alt="tcp-options-general"></td>	
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-options-network.png" alt="tcp-options-network"></td>  
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-options-filter.png" alt="tcp-options-filter"></td>
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-options-server.png" alt="tcp-options-server"></td>	
-  </tr>
-  <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-circuits.png" alt="tcp-circuits"></td>
-    <td colspan="2"><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-status.png" alt="tcp-status"></td>
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-relays.png" alt="tcp-relays"></td>
-  </tr>
-  <tr align="center">
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-options-hs.png" alt="tcp-options-hs"></td>
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-options-lists.png" alt="tcp-options-lists"></td>
-    <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-options-other.png" alt="tcp-options-other"></td>
-     <td><img src="https://raw.githubusercontent.com/abysshint/tor-control-panel/main/images/english/tcp-log.png" alt="tcp-log"></td>	
-  </tr>
-</table>
-<p align="right">[<a href="#readme-top">↑ Up</a>]</p>
+made by Gojalat team
+یک برنامه‌ی سبک و قدرتمند برای ویندوز است که برای نسخهٔ Tor Expert Bundle طراحی شده.
+این نرم‌افزار امکان کنترل کامل تور را فراهم می‌کند؛ از مدیریت زنجیره‌ها (circuits) گرفته تا مانیتورینگ ترافیک، پیکربندی بریج‌ها، تنظیمات سرور، و مشاهده آمار دقیق—all از طریق یک رابط کاربری ساده و زیبا.
 
-## Project Build
-1. Install the IDE [Delphi 11.3 CE](https://www.embarcadero.com/en/products/delphi/starter/free-download)
-    > Warning! Building the project in other versions of Delphi has not been tested and may lead to the most unexpected results.
-2. Download and install the Delphi library [Ararat Synapse](https://sourceforge.net/p/synalist/code/HEAD/tree/trunk/)
+✨ قابلیت‌های اصلی
 
-    * Create a folder **Synapse** and extract the files from the archive **synalist-code-r000-trunk.zip** into it
-	
-      `C:\Program Files (x86)\Embarcadero\Studio\21.0\source\Synapse`
-	  
-    * Open the Delphi Options and add the path **$(BDS)\source\Synapse** to the lists **Library path** and **Browsing path** for platforms: Windows 32-bit and Windows 64-bit
-	
-      `[Tools] → [Options] → [Language] → [Delphi] → [Library]
-	  
-3. Open the file **TorControlPanel.dproj**, select platform and compile the project by pressing the **[Run]** button
-<p align="right">[<a href="#readme-top">↑ Up</a>]</p>
+روشن/خاموش کردن تور تنها با یک کلیک
+تغییر فوری زنجیره‌های تور
+نمایش ترافیک و سرعت دانلود/آپلود به صورت لحظه‌ای
+مدیریت بریج‌ها، پراکسی‌ها و تنظیمات رله
+پشتیبانی از سرویس‌های مخفی (Hidden Services)
+مانیتور کردن نودها، کشورها، پینگ و وضعیت دسترسی
+اسکنر شبکه داخلی با آمار دقیق
+رابط کاربری چندزبانه
+کاملاً قابل حمل بدون نیاز به نصب
 
-## Privacy
-The program does not have direct access to the transmitted user data, does not require administrator rights, does not change any operating system system settings, including the system proxy server, does not collect any usage statistics
+⚙️ پایهٔ این پروژه
 
-## License
-This program is free software and distributed under the [MIT license](https://github.com/abysshint/tor-control-panel/blob/main/LICENSE)
+این پروژه یک فورک از Tor Control Panel اصلی است و شامل:
 
-## Links
-* [Tor Manual](https://man.archlinux.org/man/tor.1)
-* [Tor Specifications and Proposals](https://gitlab.torproject.org/tpo/core/torspec)
-* [Tor Project Distribution Server](https://dist.torproject.org/)
-* [Tor Project File Archive](https://archive.torproject.org/tor-package-archive/)
-* [Fresh GeoIP databases](https://tpo.pages.torproject.net/network-health/metrics/geoip-data/)
-* [Current version of Tor Expert Bundle](https://www.torproject.org/download/tor/)
-<p align="right">[<a href="#readme-top">↑ Up</a>]</p>
+بهبودهای شخصی
+اصلاحات رابط کاربری
+
+رفع باگ‌ها
+تنظیمات و تغییرات سفارشی
+
+📦 نیازمندی‌ها
+
+ویندوز 7 تا 11
+
+نسخه Tor Expert Bundle - 0.4x یا جدیدتر
+
+🎯 هدف این فورک
+
+بهبود تجربه کاربری
+بهبود ظاهر و ساختار UI
+رفع برخی خطاها
+افزودن قابلیت‌ها یا تنظیمات شخصی
+
+ساخته شده توسط تیم گوجالار
